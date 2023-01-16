@@ -1,0 +1,27 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "part of the odin project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloudMojos/restaurant-page.git"
+  },
+  "keywords": [
+    "page",
+    "the-odin-project",
+    "restaurant"
+  ],
+  "author": "Joshuel Ernest Q. Simbulan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CloudMojos/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/CloudMojos/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0"
+  }
+}
