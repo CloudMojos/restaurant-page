@@ -12,8 +12,8 @@
         <header>
             <h1 class="logo">🍗 Wingtopia 🍺</h1>
             <ul class="links">
-                <li class="clickable">🏠 Home</li>
-                <li class="clickable active">📜 Menu</li>
+                <li class="clickable active">🏠 Home</li>
+                <li class="clickable">📜 Menu</li>
                 <li class="clickable">❓ About</li>
                 <!-- <li class="clickable">🚪 Log in</li> -->
                 <!-- <li class="clickable">🚧 Under development</li> -->
@@ -26,13 +26,13 @@
                     <img src="src/img/DSC_0319.jpg">
                     <p>
                         <span class="first-word">Enjoy</span>
-                        our premium unli-wings for only <span style="font-weight: bold;">*$20.99*</span> per hour. Or subscribe to our membership program where you can charge up to 10,000 hours! Join the membership program and gain access to many vouchers, freebies, and monthly gifts.
+                        our premium unli-wings for only <span style="font-weight: bold;">*$20.99*</span> per hour. Or subscribe to our membership program where you can charge up to 10,000 hours!
                     </p>
                 </div>
                 <div class="section-content right">
                     <p>
-                        <span class="first-word">Enjoy</span>
-                        our premium unli-wings for only <span style="font-weight: bold;">*$20.99*</span> per hour. Or subscribe to our membership program where you can charge up to 10,000 hours! Join the membership program and gain access to many vouchers, freebies, and monthly gifts.
+                        <span class="first-word">Upgrade</span>
+                       your wing-eating experience by subscribing to our membership program and receive exclusive perks such as vouchers, freebies, and monthly gifts.
                     </p>
                     <img src="src/img/DSC_0319.jpg">
                 </div>
@@ -59,6 +59,23 @@
             </section>
         </div>
     </div>
-    <script src="main.js"></script>
+    <script defer>
+        let tabs = document.querySelectorAll('.links > *');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                if (e.target.classList.contains('active')) { return; }
+                else {
+                    // remove the classlist from the other
+                    tabs.forEach(tab => {
+                        if (tab.classList.contains('active')) {
+                            tab.classList.remove('active');
+                        }
+                    })
+                    // , add the classlist here.
+                    tab.classList.add('active');
+                }
+            })
+        })
+    </script>
 </body>
 </html>
