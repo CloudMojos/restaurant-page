@@ -1,4 +1,5 @@
-import defaultExport from "./nav";
+import './styles.css';
+import nav from './nav';
 console.log('Hello world!')
 
 // - Run webpack server
@@ -10,5 +11,5 @@ console.log('Hello world!')
 
 const content = document.querySelector('#content');
 
-content.appendChild(creatNav());
+content.appendChild(nav());
 
