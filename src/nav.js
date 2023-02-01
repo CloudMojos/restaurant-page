@@ -1,4 +1,4 @@
-export default function createNav() {
+function createNav() {
     const header = document.createElement('header');
    
     const h1 = document.createElement('h1');
@@ -11,10 +11,12 @@ export default function createNav() {
     const liHome = document.createElement('li');
     liHome.className = 'clickable active';
     liHome.textContent = '🏠 Home';
+    liHome.id = 'home-link';
 
     const liMenu = document.createElement('li');
     liMenu.className = 'clickable';
     liMenu.textContent = '📜 Menu';
+    liMenu.id = 'menu-link';
 
     const liAbout = document.createElement('li');
     liAbout.className = 'clickble';
@@ -30,13 +32,5 @@ export default function createNav() {
     return header;
 }
 
-{/* <header>
-<h1 class="logo">🍗 Wingtopia 🍺</h1>
-<ul class="links">
-    <li class="clickable active">🏠 Home</li>
-    <li class="clickable">📜 Menu</li>
-    <li class="clickable">❓ About</li>
-    <!-- <li class="clickable">🚪 Log in</li> -->
-    <!-- <li class="clickable">🚧 Under development</li> -->
-</ul>
-</header> */}
+const nav = createNav();
+export default nav;

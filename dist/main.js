@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _tab_container_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tab-container.js */ \"./src/tab-container.js\");\n\r\n\r\nconst Home = new _tab_container_js__WEBPACK_IMPORTED_MODULE_0__.TabContainer('home', true);\r\nHome.header = \"Yani please don't break me.\";\r\nHome.addSection(\"left\", \"Enjoy our premium unli-wings for only $20.99 per hour. Or subscribe to our membership program where you can charge up to 10,000 hours!\");\r\nHome.addSection(\"right\", \"Upgrade your wing-eating experience by subscribing to our membership program and receive exclusive perks such as vouchers, freebies, and monthly gifts.\");\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home.structure);\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _tab_container_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tab-container.js */ \"./src/tab-container.js\");\n/* harmony import */ var _img_DSC_0319_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/DSC_0319.jpg */ \"./src/img/DSC_0319.jpg\");\n/* harmony import */ var _img_bundle_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/bundle.png */ \"./src/img/bundle.png\");\n\r\n\r\n\r\n\r\nconst Home = new _tab_container_js__WEBPACK_IMPORTED_MODULE_0__.TabContainer('home', true);\r\nHome.header = \"Unleash your wing cravings and beer thirst at Wingtopia!\";\r\nHome.addSection(\"left\", _img_DSC_0319_jpg__WEBPACK_IMPORTED_MODULE_1__, \"Enjoy our premium unli-wings for only $20.99 per hour. Or subscribe to our membership program where you can charge up to 10,000 hours!\");\r\nHome.addSection(\"right\", _img_bundle_png__WEBPACK_IMPORTED_MODULE_2__, \"Upgrade your wing-eating experience by subscribing to our membership program and receive exclusive perks such as vouchers, freebies, and monthly gifts.\");\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home.structure);\n\n//# sourceURL=webpack://restaurant-page/./src/home.js?");
 
 /***/ }),
 
@@ -126,7 +126,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav */ \"./src/nav.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n\r\n\r\n\r\n\r\n// - Run webpack server\r\n// - Use import export\r\n//   > for handling tab  navigation\r\n//   \r\n\r\n// \r\n\r\nconst content = document.querySelector('#content');\r\n\r\ncontent.appendChild((0,_nav__WEBPACK_IMPORTED_MODULE_1__[\"default\"])());\r\ncontent.appendChild(_home__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\r\n\r\nconsole.log(content);\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nav */ \"./src/nav.js\");\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home */ \"./src/home.js\");\n/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu */ \"./src/menu.js\");\n\r\n\r\n\r\n\r\n\r\nconst content = document.querySelector('#content');\r\n\r\ncontent.appendChild(_nav__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\r\ncontent.appendChild(_home__WEBPACK_IMPORTED_MODULE_2__[\"default\"]);\r\ncontent.appendChild(_menu__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\r\n\r\nlet tabs = document.querySelectorAll('.links > *');\r\nconsole.log(tabs);\r\ntabs.forEach(tab => {\r\n    tab.addEventListener('click', (e) => {\r\n        if (e.target.classList.contains('active')) { return; }\r\n        else {\r\n            // remove the classlist from the others\r\n            tabs.forEach(tab => {\r\n                if (tab.classList.contains('active')) {\r\n                    tab.classList.remove('active');\r\n                }\r\n            })\r\n            // , add the classlist here.\r\n            tab.classList.add('active');\r\n        }\r\n    })\r\n})\r\n\n\n//# sourceURL=webpack://restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _tab_container_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tab-container.js */ \"./src/tab-container.js\");\n/* harmony import */ var _img_DSC_0319_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/DSC_0319.jpg */ \"./src/img/DSC_0319.jpg\");\n\r\n\r\n\r\nconst Menu = new _tab_container_js__WEBPACK_IMPORTED_MODULE_0__.TabContainer('menu');\r\nMenu.header = \"What We Offer\";\r\nMenu.addSection(\"left\", _img_DSC_0319_jpg__WEBPACK_IMPORTED_MODULE_1__, \"Enjoy our premium unli-wings for only $20.99 per hour. Or subscribe to our membership program where you can charge up to 10,000 hours!\");\r\nMenu.addSection(\"right\", _img_DSC_0319_jpg__WEBPACK_IMPORTED_MODULE_1__, \"Upgrade your wing-eating experience by subscribing to our membership program and receive exclusive perks such as vouchers, freebies, and monthly gifts.\");\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Menu.structure);\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
 
 /***/ }),
 
@@ -136,7 +146,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createNav)\n/* harmony export */ });\nfunction createNav() {\r\n    const header = document.createElement('header');\r\n   \r\n    const h1 = document.createElement('h1');\r\n    h1.textContent = '🍗 Wingtopia 🍺';\r\n    h1.className = 'logo';\r\n\r\n    const ul = document.createElement('ul');\r\n    ul.className = 'links';\r\n\r\n    const liHome = document.createElement('li');\r\n    liHome.className = 'clickable active';\r\n    liHome.textContent = '🏠 Home';\r\n\r\n    const liMenu = document.createElement('li');\r\n    liMenu.className = 'clickable';\r\n    liMenu.textContent = '📜 Menu';\r\n\r\n    const liAbout = document.createElement('li');\r\n    liAbout.className = 'clickble';\r\n    liAbout.textContent = '❓ About';\r\n\r\n    ul.appendChild(liHome);\r\n    ul.appendChild(liMenu);\r\n    ul.appendChild(liAbout);\r\n\r\n    header.appendChild(h1);\r\n    header.appendChild(ul);\r\n\r\n    return header;\r\n}\r\n\r\n{/* <header>\r\n<h1 class=\"logo\">🍗 Wingtopia 🍺</h1>\r\n<ul class=\"links\">\r\n    <li class=\"clickable active\">🏠 Home</li>\r\n    <li class=\"clickable\">📜 Menu</li>\r\n    <li class=\"clickable\">❓ About</li>\r\n    <!-- <li class=\"clickable\">🚪 Log in</li> -->\r\n    <!-- <li class=\"clickable\">🚧 Under development</li> -->\r\n</ul>\r\n</header> */}\n\n//# sourceURL=webpack://restaurant-page/./src/nav.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction createNav() {\r\n    const header = document.createElement('header');\r\n   \r\n    const h1 = document.createElement('h1');\r\n    h1.textContent = '🍗 Wingtopia 🍺';\r\n    h1.className = 'logo';\r\n\r\n    const ul = document.createElement('ul');\r\n    ul.className = 'links';\r\n\r\n    const liHome = document.createElement('li');\r\n    liHome.className = 'clickable active';\r\n    liHome.textContent = '🏠 Home';\r\n    liHome.id = 'home-link';\r\n\r\n    const liMenu = document.createElement('li');\r\n    liMenu.className = 'clickable';\r\n    liMenu.textContent = '📜 Menu';\r\n    liMenu.id = 'menu-link';\r\n\r\n    const liAbout = document.createElement('li');\r\n    liAbout.className = 'clickble';\r\n    liAbout.textContent = '❓ About';\r\n\r\n    ul.appendChild(liHome);\r\n    ul.appendChild(liMenu);\r\n    ul.appendChild(liAbout);\r\n\r\n    header.appendChild(h1);\r\n    header.appendChild(ul);\r\n\r\n    return header;\r\n}\r\n\r\nconst nav = createNav();\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (nav);\n\n//# sourceURL=webpack://restaurant-page/./src/nav.js?");
 
 /***/ }),
 
@@ -146,7 +156,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"TabContainer\": () => (/* binding */ TabContainer)\n/* harmony export */ });\nclass TabContainer {\r\n    constructor(name, active = false) {\r\n        this.name = name;\r\n        this.active = active;\r\n\r\n        this.structure = document.createElement('div');\r\n        this.structure.classList.add('tab-container');\r\n        this.structure.classList.add(name);\r\n        if (this.active === true) { this.structure.classList.add('active'); }\r\n\r\n        this.section = document.createElement('section');\r\n        this.structure.appendChild(this.section);\r\n    }\r\n\r\n    set header(text) {\r\n        this.h1 = document.createElement('h1');\r\n        this.h1.className = 'section-header';\r\n        this.h1.textContent = text;\r\n        this.structure.appendChild(this.h1);\r\n        \r\n    }\r\n\r\n    addSection(alignment, text) {\r\n        // Challenge: Take the first word in the text, make it a span element with class first-word\r\n        let div = document.createElement('div');\r\n        div.className = `section-content ${alignment}`;\r\n\r\n        // let img = document.createElement('img');\r\n        // img.setAttribute('src', img_url);\r\n        // div.appendChild(img);\r\n\r\n        let p = document.createElement('p');\r\n        let firstWord = document.createElement('span');\r\n        text = text.split(' ');\r\n        firstWord.textContent = text.splice(0, 1);\r\n        firstWord.className = 'first-word';\r\n        text = text.join(' ');\r\n        \r\n        p.appendChild(firstWord);\r\n        p.appendChild(document.createTextNode(text));\r\n        div.appendChild(p);\r\n\r\n        this.section.appendChild(div);\r\n    }\r\n} \n\n//# sourceURL=webpack://restaurant-page/./src/tab-container.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"TabContainer\": () => (/* binding */ TabContainer)\n/* harmony export */ });\nclass TabContainer {\r\n    constructor(name, active = false) {\r\n        this.name = name;\r\n        this.active = active;\r\n\r\n        this.structure = document.createElement('div');\r\n        this.structure.classList.add('tab-container');\r\n        this.structure.classList.add(name);\r\n        if (this.active === true) { this.structure.classList.add('active'); }\r\n\r\n        this.section = document.createElement('section');\r\n        this.structure.appendChild(this.section);\r\n    }\r\n\r\n    set header(text) {\r\n        this.h1 = document.createElement('h1');\r\n        this.h1.className = 'section-header';\r\n        this.h1.textContent = text;\r\n        this.structure.insertBefore(this.h1, this.section);\r\n        \r\n    }\r\n\r\n    addSection(alignment, img_url, text) {\r\n        // Challenge: Take the first word in the text, make it a span element with class first-word\r\n        let div = document.createElement('div');\r\n        div.className = `section-content ${alignment}`;\r\n\r\n        let img = document.createElement('img');\r\n        img.setAttribute('src', img_url);\r\n\r\n        let p = document.createElement('p');\r\n        let firstWord = document.createElement('span');\r\n        text = text.split(' ');\r\n        firstWord.textContent = text.splice(0, 1);\r\n        firstWord.className = 'first-word';\r\n        text = text.join(' ');\r\n        \r\n        p.appendChild(firstWord);\r\n        p.appendChild(document.createTextNode(' ' + text));\r\n\r\n        if (alignment == 'left') {\r\n            div.appendChild(img);\r\n            div.appendChild(p);\r\n        } else if (alignment == \"right\") {\r\n            div.appendChild(p);\r\n            div.appendChild(img);\r\n        }\r\n\r\n\r\n        this.section.appendChild(div);\r\n    }\r\n} \n\n//# sourceURL=webpack://restaurant-page/./src/tab-container.js?");
+
+/***/ }),
+
+/***/ "./src/img/DSC_0319.jpg":
+/*!******************************!*\
+  !*** ./src/img/DSC_0319.jpg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"20f6a04316c3b21c058a.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./src/img/DSC_0319.jpg?");
+
+/***/ }),
+
+/***/ "./src/img/bundle.png":
+/*!****************************!*\
+  !*** ./src/img/bundle.png ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"689cd2764060c74fecb8.png\";\n\n//# sourceURL=webpack://restaurant-page/./src/img/bundle.png?");
 
 /***/ })
 
@@ -201,6 +231,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -215,6 +257,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

@@ -16,18 +16,17 @@ export class TabContainer {
         this.h1 = document.createElement('h1');
         this.h1.className = 'section-header';
         this.h1.textContent = text;
-        this.structure.appendChild(this.h1);
+        this.structure.insertBefore(this.h1, this.section);
         
     }
 
-    addSection(alignment, text) {
+    addSection(alignment, img_url, text) {
         // Challenge: Take the first word in the text, make it a span element with class first-word
         let div = document.createElement('div');
         div.className = `section-content ${alignment}`;
 
-        // let img = document.createElement('img');
-        // img.setAttribute('src', img_url);
-        // div.appendChild(img);
+        let img = document.createElement('img');
+        img.setAttribute('src', img_url);
 
         let p = document.createElement('p');
         let firstWord = document.createElement('span');
@@ -37,8 +36,16 @@ export class TabContainer {
         text = text.join(' ');
         
         p.appendChild(firstWord);
-        p.appendChild(document.createTextNode(text));
-        div.appendChild(p);
+        p.appendChild(document.createTextNode(' ' + text));
+
+        if (alignment == 'left') {
+            div.appendChild(img);
+            div.appendChild(p);
+        } else if (alignment == "right") {
+            div.appendChild(p);
+            div.appendChild(img);
+        }
+
 
         this.section.appendChild(div);
     }
