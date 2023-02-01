@@ -1,7 +1,6 @@
 import './styles.css';
 import nav from './nav';
 import home from './home'
-console.log('Hello world!')
 
 // - Run webpack server
 // - Use import export
@@ -15,3 +14,4 @@ const content = document.querySelector('#content');
 content.appendChild(nav());
 content.appendChild(home);
 
+console.log(content);
