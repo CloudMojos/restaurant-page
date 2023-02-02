@@ -11,16 +11,17 @@ function createNav() {
     const liHome = document.createElement('li');
     liHome.className = 'clickable active';
     liHome.textContent = '🏠 Home';
-    liHome.id = 'home-link';
+    liHome.setAttribute('data-link', 'home');
 
     const liMenu = document.createElement('li');
     liMenu.className = 'clickable';
     liMenu.textContent = '📜 Menu';
-    liMenu.id = 'menu-link';
+    liMenu.setAttribute('data-link', 'menu');
 
     const liAbout = document.createElement('li');
     liAbout.className = 'clickble';
     liAbout.textContent = '❓ About';
+    liAbout.setAttribute('data-link', 'about');
 
     ul.appendChild(liHome);
     ul.appendChild(liMenu);

@@ -6,6 +6,7 @@ export class TabContainer {
         this.structure = document.createElement('div');
         this.structure.classList.add('tab-container');
         this.structure.classList.add(name);
+        this.structure.id = name;
         if (this.active === true) { this.structure.classList.add('active'); }
 
         this.section = document.createElement('section');
