@@ -23,7 +23,6 @@ function changeTab() {
                         container.classList.remove('active');
                     }
                 })
-                // , add the classlist here.
                 tab.classList.add('active');
                 document.getElementById(tab.dataset.link).classList.add('active'); 
             }
